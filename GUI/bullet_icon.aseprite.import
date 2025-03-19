@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://wmnr7yt7278b"
+path="res://.godot/imported/bullet_icon.aseprite-fcb937ba90b671e92c19e40ec9979cc7.res"
+
+[deps]
+
+source_file="res://GUI/bullet_icon.aseprite"
+dest_files=["res://.godot/imported/bullet_icon.aseprite-fcb937ba90b671e92c19e40ec9979cc7.res"]
+
+[params]
+

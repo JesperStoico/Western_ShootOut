@@ -1,0 +1,151 @@
+[gd_scene load_steps=12 format=4 uid="uid://c7lyn5p08pdn"]
+
+[ext_resource type="Script" path="res://Player2/player_p2.gd" id="1_ecjos"]
+[ext_resource type="PackedScene" uid="uid://dm14v0dhwxquf" path="res://Player2/bullet_p2.tscn" id="2_l5gf0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdqrs"]
+size = Vector2(9, 23)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_c3nmf"]
+_data = PackedByteArray("AAADAAUAAAABAAAAAAEAAMAAAADWAwAAUklGRs4DAABXRUJQVlA4TMEDAAAv/8AvEJ+gNLLVCI86HQ5HC6knVZ8+g45NG0xj22r0HTbpnPH0QLVUhc34nWUTAEATNgH2jkAqCpOACFs9nf8AAADA///eN4yXNBCsaI6pYhjpB48DUaHYqtBM/jm965XLXUXObksgwbbduG2ADCIlA2ZD7X+zJKUk/fiUOzqi/xDctpEkyVXTe6+cPjBvkGcXcff+c/y9ub3d+XvTeruf487fm9D7k/D3DuENSW3Rlv4T/L1JvfWlVv7ezN51DH9vem/l703sLfch/L3pveuEe9vhLwXxrkXgvYHAelvPvlsIb5HSIvDeMEL07tqqBYeAvQ9zAx71mAKRtlon7y1yJl7g2vzeOGRZSg+I8Z3uNLxRWU4AZube+/7xscjV4wFQnbe3mbhH6N0j/N4oovTetg3vveG9UYTonfDe9CQ0KemG94azwTCzAL1TCxz4lsE7sfZOQ7CE2QneG8pYHTy3FGCnRNp7OEYAPbVDfXBv/kNCcqxP2ju3CHqtLTkjneWw0L0fAJDr0B/4Kbb3gZyRk5MHEBPBY2I4BmM8Jobb2dCsDTMzoPMBfG/czifnH1h7zRnpfLz84/SGnv8YwV7+IQI9/+w7y+Xn6T//WeImj2Pcvf/cfL1voXq7c3rfwN63GHNzP8edy/sWsjeAT8LmfYvZG5Laoi3SctHe+lIro/dNDN7bgsytjsF7IzBD9/7MG44yeltLMG9Y7kM4vc1sF7Eg3nAqq7ftu0XxRlOL/Fzef5w89ezMGzU4C+ONRKS0/OT99mo9+25n3qjUGscbGB3ys5ecMdRWLThUSlFibx0C87ZaD95AvCszew+DK0NQ2ie7gC/7EsAbx7IsSMZ3+qXgb3xe733/+Fjwc5uCNxa/dMzEHX/dT93b7OTJJShm4o1la0ExE28gCcvkva2Tkm5IrsF71L5u74P2hXtLJ12/d5q+92O31pacf+W95feAt4ldt/faMLPr9l6Pz63pe19+nv7zxAF37z935b3H4OeG7037vXPcoXML0puQT4OfW4DelKkt2hLjvOF7k6IvQ3H8ecP35t1jIswN3ZucEHODQ/3JfUiEuaF701Pxc4NT2alFAswN3psZkdIS4LyBezMfZdiqwHU/eON780PvrfQouXehxsbezN78L2auqvTehZl9773JvWulRtVqLeTe9Git7N6qws3Wwu9NTBrh9ybeSa3D7c2OdSbgTczWz/oEvJnTSfze/CR678d+rS0583s/8sjQm9r71wAT4/fm/rK18HtT7zXnCXhffp7+ExgBAA==")
+size_override = Vector2(256, 192)
+
+[sub_resource type="Animation" id="Animation_1bb32"]
+length = 0.75
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [8, 9, 10]
+}
+
+[sub_resource type="Animation" id="Animation_gtit4"]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_bm6bx"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_j7blb"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b31ni"]
+_data = {
+"idle": SubResource("Animation_1bb32"),
+"reload": SubResource("Animation_gtit4"),
+"shoot": SubResource("Animation_bm6bx"),
+"walk": SubResource("Animation_j7blb")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ejynl"]
+radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qbw4"]
+size = Vector2(12, 23)
+
+[node name="Player2" type="CharacterBody2D"]
+script = ExtResource("1_ecjos")
+speed = 150
+bullet = ExtResource("2_l5gf0")
+shoot_delay = 0.5
+reload_delay = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, 3.5)
+shape = SubResource("RectangleShape2D_bdqrs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_c3nmf")
+hframes = 4
+vframes = 3
+frame = 5
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "Sprite2D/AnimationPlayer",
+"slice": "",
+"source": "res://Player2/player2.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "dc4015cf34254546da06b479d9eebd88"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_b31ni")
+}
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-12, -8)
+
+[node name="AttackTimer" type="Timer" parent="."]
+
+[node name="ReloadTimer" type="Timer" parent="."]
+
+[node name="head_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="head_area"]
+position = Vector2(2, -14)
+shape = SubResource("CircleShape2D_ejynl")
+debug_color = Color(0.654902, 0.0745098, 0.231373, 0.658824)
+
+[node name="body_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="body_area"]
+position = Vector2(3, 3.5)
+shape = SubResource("RectangleShape2D_3qbw4")
+debug_color = Color(0.592157, 0.266667, 0.0352941, 0.788235)
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]

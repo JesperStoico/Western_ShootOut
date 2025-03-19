@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://i7lr27sh5sg"
+path="res://.godot/imported/bullet_p2.aseprite-8e7f0240bcc24176a75bd6a6c1054d74.res"
+
+[deps]
+
+source_file="res://Player2/bullet_p2.aseprite"
+dest_files=["res://.godot/imported/bullet_p2.aseprite-8e7f0240bcc24176a75bd6a6c1054d74.res"]
+
+[params]
+

@@ -1,0 +1,202 @@
+[gd_scene load_steps=7 format=4 uid="uid://b2dp8yl744r00"]
+
+[ext_resource type="Script" path="res://GUI/gui.gd" id="1_oygql"]
+[ext_resource type="Texture2D" uid="uid://d3sry2rsm45w4" path="res://GUI/bullet_icon.png" id="2_feg37"]
+[ext_resource type="FontFile" uid="uid://drcxyldek2dmo" path="res://GUI/WEST____.TTF" id="3_isgwa"]
+[ext_resource type="Script" path="res://GUI/button.gd" id="4_id04m"]
+[ext_resource type="Script" path="res://GUI/exit_game.gd" id="5_5r7hm"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ld7rb"]
+_data = PackedByteArray("AAADAAUAAAABAAAACgAAAAoAAABKAAAAUklGRkIAAABXRUJQVlA4TDUAAAAvCUACEB8gEEhxOBMtEEhxPhMtEEhxUos8/wH4q0AxI0lQ74Uwr5EZf7FViOh/ABzxJ2IiAAA=")
+size_override = Vector2(10, 10)
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_oygql")
+bullet_texture = ExtResource("2_feg37")
+
+[node name="Player1_bullets" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -15.0
+offset_right = 47.0
+offset_bottom = 25.0
+grow_vertical = 0
+theme_override_constants/separation = -2
+
+[node name="TextureRect" type="TextureRect" parent="Control/Player1_bullets"]
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("PortableCompressedTexture2D_ld7rb")
+expand_mode = 2
+stretch_mode = 2
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://GUI/bullet_icon.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5ea6baca412a9cf0af40ebaf88991f00"
+
+[node name="Player2_bullets" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = -15.0
+offset_right = -9.0
+offset_bottom = 25.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = -2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/Player2_bullets"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("PortableCompressedTexture2D_ld7rb")
+expand_mode = 2
+stretch_mode = 2
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://GUI/bullet_icon.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5ea6baca412a9cf0af40ebaf88991f00"
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -17.5
+offset_top = 2.0
+offset_right = 29.5
+offset_bottom = 25.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_isgwa")
+theme_override_font_sizes/font_size = 24
+text = "1 - 2 "
+
+[node name="WinScreen" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control/WinScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.88, 0.466253, 0.0792, 0.588235)
+
+[node name="Label" type="Label" parent="Control/WinScreen/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.5
+offset_top = -19.0
+offset_right = 184.5
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_isgwa")
+theme_override_font_sizes/font_size = 44
+text = "The winner is Player 1"
+
+[node name="PlayAgain" type="Button" parent="Control/WinScreen"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -144.0
+offset_right = 51.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_isgwa")
+theme_override_font_sizes/font_size = 24
+text = "Play again"
+flat = true
+script = ExtResource("4_id04m")
+
+[node name="ExitGame" type="Button" parent="Control/WinScreen"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -112.0
+offset_right = 48.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_isgwa")
+theme_override_font_sizes/font_size = 24
+text = "Exit game"
+flat = true
+script = ExtResource("5_5r7hm")
+
+[connection signal="pressed" from="Control/WinScreen/PlayAgain" to="Control/WinScreen/PlayAgain" method="_on_pressed"]
+[connection signal="pressed" from="Control/WinScreen/ExitGame" to="Control/WinScreen/ExitGame" method="_on_pressed"]

@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=4 uid="uid://dyglyvblaeasa"]
+
+[ext_resource type="Script" path="res://props/cactus/cactus.gd" id="1_kk2t1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sk7p3"]
+radius = 6.0
+height = 50.0
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_w32db"]
+_data = PackedByteArray("AAADAAUAAAABAAAAKAAAADcAAABqAQAAUklGRmIBAABXRUJQVlA4TFUBAAAvJ4ANEE+gKJKk5lzkRBSBaMzwR5eCto2c23dk9vPH8zTUNJICXX3tAyjAf4EhnMx/AMCJHWqbh6p0LXfP+/Tz4WuAm+1f2+jvxOPSaAKcGIA/ehhAwW2k59EKeABfviuvs9cF8UcX64j+M3DbtpF64O39C/ifBnOxDzK3t7PQ9T4npxJPcXYDqr3GXZzZGZW8YDUG2OOJSgQ6AIHrDDogfNpHDxOQuGYAyYuLS4UZbgBSV2bM2B7X6WdyPY7WliklzkAEFCImm50yM5ABZcJIUNiBqBJGkDAG4VEXPAygkBWasQPmklLG5C9TOGORDgCA4GS3A0Bcx8003vt1gF5Z9NnRMM750mNFB845EWGM0RtE4GgtzOkqvVPGvNzJpNeVQvz8oEG9KzjPrQTyh0jU/e+Spcs3CBk3D2LASsK3nKa7IZi/Qa4FX1ZaF5yPcgtxy28YAAA=")
+size_override = Vector2(40, 55)
+
+[node name="Cactus" type="StaticBody2D" groups=["props"]]
+script = ExtResource("1_kk2t1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_sk7p3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_w32db")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://props/cactus/cactus.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "192ac6c4cd80d31a8868fc8d30196ad3"

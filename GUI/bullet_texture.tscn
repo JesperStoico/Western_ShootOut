@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=4 uid="uid://bfoe02l7hj2dn"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_2f3f0"]
+_data = PackedByteArray("AAADAAUAAAABAAAACgAAAAoAAABKAAAAUklGRkIAAABXRUJQVlA4TDUAAAAvCUACEB8gEEhxOBMtEEhxPhMtEEhxUos8/wH4q0AxI0lQ74Uwr5EZf7FViOh/ABzxJ2IiAAA=")
+size_override = Vector2(10, 10)
+
+[node name="TextureRect" type="TextureRect"]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_2f3f0")
+stretch_mode = 2
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://GUI/bullet_icon.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5ea6baca412a9cf0af40ebaf88991f00"

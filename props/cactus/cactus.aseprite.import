@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bx4yuskt4woiy"
+path="res://.godot/imported/cactus.aseprite-279cf30dc6046643c1a68f1f6a8c8969.res"
+
+[deps]
+
+source_file="res://props/cactus/cactus.aseprite"
+dest_files=["res://.godot/imported/cactus.aseprite-279cf30dc6046643c1a68f1f6a8c8969.res"]
+
+[params]
+
