@@ -55,7 +55,3 @@ position = Vector2(68, 86)
 
 [node name="Cactus2" parent="Props" instance=ExtResource("6_jagay")]
 position = Vector2(234, 196)
-
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
