@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://b2dp8yl744r00"]
+[gd_scene load_steps=8 format=4 uid="uid://b2dp8yl744r00"]
 
 [ext_resource type="Script" path="res://GUI/gui.gd" id="1_oygql"]
 [ext_resource type="Texture2D" uid="uid://d3sry2rsm45w4" path="res://GUI/bullet_icon.png" id="2_feg37"]
 [ext_resource type="FontFile" uid="uid://drcxyldek2dmo" path="res://GUI/WEST____.TTF" id="3_isgwa"]
 [ext_resource type="Script" path="res://GUI/button.gd" id="4_id04m"]
 [ext_resource type="Script" path="res://GUI/exit_game.gd" id="5_5r7hm"]
+[ext_resource type="Script" path="res://GUI/warning_text.gd" id="6_8ciml"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ld7rb"]
 _data = PackedByteArray("AAADAAUAAAABAAAACgAAAAoAAABKAAAAUklGRkIAAABXRUJQVlA4TDUAAAAvCUACEB8gEEhxOBMtEEhxPhMtEEhxUos8/wH4q0AxI0lQ74Uwr5EZf7FViOh/ABzxJ2IiAAA=")
@@ -197,6 +198,36 @@ theme_override_font_sizes/font_size = 24
 text = "Exit game"
 flat = true
 script = ExtResource("5_5r7hm")
+
+[node name="WarningText" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_8ciml")
+
+[node name="Player1_bullet_warning" type="Label" parent="Control/WarningText"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 328.0
+offset_right = 69.0
+offset_bottom = 351.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_isgwa")
+text = "Reload!"
+
+[node name="Player2_bullet_warning" type="Label" parent="Control/WarningText"]
+layout_mode = 2
+offset_left = 585.0
+offset_top = 328.0
+offset_right = 643.0
+offset_bottom = 351.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_isgwa")
+text = "Reload!"
 
 [connection signal="pressed" from="Control/WinScreen/PlayAgain" to="Control/WinScreen/PlayAgain" method="_on_pressed"]
 [connection signal="pressed" from="Control/WinScreen/ExitGame" to="Control/WinScreen/ExitGame" method="_on_pressed"]

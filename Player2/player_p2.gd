@@ -3,6 +3,7 @@ class_name Player2 extends CharacterBody2D
 signal shoot_signal
 signal reload_signal
 signal player2_dead
+signal out_of_bullets
 
 @export var speed:int
 @export var bullet: PackedScene
@@ -61,14 +62,16 @@ func reload() -> void:
 
 func shoot() -> void:
 	var b = bullet.instantiate()
-	owner.add_child(b)
-	b.transform = marker_2d.global_transform
+	Globals.map.add_child(b)
+	b.global_transform = marker_2d.global_transform
 	attack_timer.start()
 	animation_player.play("shoot")
 	audio_player.set_stream(shoot_sound)
 	audio_player.set_pitch_scale(randf_range(0.7, 1.0))
 	audio_player.play()
 	current_bullet_count -= 1
+	if current_bullet_count == 0:
+		out_of_bullets.emit()
 	shoot_signal.emit()
 	pass
 

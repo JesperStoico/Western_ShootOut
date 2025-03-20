@@ -6,8 +6,8 @@ class_name GUI extends Control
 	1: $Player1_bullets,
 	2: $Player2_bullets
 }
-@onready var player_1: Player1 = $"../../Player"
-@onready var player_2: Player2 = $"../../Player2"
+@onready var player_1: Player1 = Globals.player1
+@onready var player_2: Player2 = Globals.player2
 @onready var score: Label = $Label
 @onready var win_screen: Control = $WinScreen
 @onready var win_screen_label: Label = $WinScreen/ColorRect/Label

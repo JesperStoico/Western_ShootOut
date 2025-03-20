@@ -1,8 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://bgxqipq81jq73"]
+[gd_scene load_steps=5 format=4 uid="uid://bgxqipq81jq73"]
 
-[ext_resource type="PackedScene" uid="uid://b3w0jfcg244y7" path="res://Player1/player.tscn" id="1_dxkcs"]
 [ext_resource type="PackedScene" uid="uid://chkyii7nesmax" path="res://TileSets/Desert.tscn" id="1_sdyko"]
-[ext_resource type="PackedScene" uid="uid://c7lyn5p08pdn" path="res://Player2/player2.tscn" id="2_d7br6"]
 [ext_resource type="PackedScene" uid="uid://b2dp8yl744r00" path="res://GUI/gui.tscn" id="4_q2vqt"]
 [ext_resource type="PackedScene" uid="uid://dyglyvblaeasa" path="res://props/cactus/cactus.tscn" id="6_jagay"]
 
@@ -28,12 +26,6 @@ shape = SubResource("RectangleShape2D_ryava")
 position = Vector2(-163, -93)
 anchor_mode = 0
 
-[node name="Player" parent="." instance=ExtResource("1_dxkcs")]
-position = Vector2(34, 130)
-
-[node name="Player2" parent="." instance=ExtResource("2_d7br6")]
-position = Vector2(284, 123)
-
 [node name="GUI" parent="." instance=ExtResource("4_q2vqt")]
 
 [node name="Props" type="Node" parent="."]
@@ -55,3 +47,9 @@ position = Vector2(68, 86)
 
 [node name="Cactus2" parent="Props" instance=ExtResource("6_jagay")]
 position = Vector2(234, 196)
+
+[node name="SpawnPlayer1" type="Marker2D" parent="."]
+position = Vector2(-1, 200)
+
+[node name="SpawnPlayer2" type="Marker2D" parent="."]
+position = Vector2(309, 170)
