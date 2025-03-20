@@ -86,8 +86,10 @@ func _take_head_dmg(_body) -> void:
 		print("Player 2 wins")
 		Globals.player2_score += 1
 		player1_dead.emit()
+		_body.queue_free()
 
 func _take_body_dmg(_body) -> void:
 	if _body.is_in_group("bullet"):
 		speed -= 10
+		_body.queue_free()
 		pass # Replace with function body.

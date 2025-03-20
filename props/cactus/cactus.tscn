@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=4 uid="uid://dyglyvblaeasa"]
+[gd_scene load_steps=11 format=4 uid="uid://dyglyvblaeasa"]
 
 [ext_resource type="Script" path="res://props/cactus/cactus.gd" id="1_kk2t1"]
 
@@ -6,9 +6,111 @@
 radius = 6.0
 height = 50.0
 
-[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_w32db"]
-_data = PackedByteArray("AAADAAUAAAABAAAAKAAAADcAAABqAQAAUklGRmIBAABXRUJQVlA4TFUBAAAvJ4ANEE+gKJKk5lzkRBSBaMzwR5eCto2c23dk9vPH8zTUNJICXX3tAyjAf4EhnMx/AMCJHWqbh6p0LXfP+/Tz4WuAm+1f2+jvxOPSaAKcGIA/ehhAwW2k59EKeABfviuvs9cF8UcX64j+M3DbtpF64O39C/ifBnOxDzK3t7PQ9T4npxJPcXYDqr3GXZzZGZW8YDUG2OOJSgQ6AIHrDDogfNpHDxOQuGYAyYuLS4UZbgBSV2bM2B7X6WdyPY7WliklzkAEFCImm50yM5ABZcJIUNiBqBJGkDAG4VEXPAygkBWasQPmklLG5C9TOGORDgCA4GS3A0Bcx8003vt1gF5Z9NnRMM750mNFB845EWGM0RtE4GgtzOkqvVPGvNzJpNeVQvz8oEG9KzjPrQTyh0jU/e+Spcs3CBk3D2LASsK3nKa7IZi/Qa4FX1ZaF5yPcgtxy28YAAA=")
-size_override = Vector2(40, 55)
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_vn65d"]
+_data = PackedByteArray("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")
+size_override = Vector2(320, 385)
+
+[sub_resource type="Animation" id="Animation_1sw61"]
+resource_name = "take_damage"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(10, 10, 10, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sr6t6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dowf8"]
+length = 2.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+}
+
+[sub_resource type="Animation" id="Animation_8ulkf"]
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
+}
+
+[sub_resource type="Animation" id="Animation_q2aan"]
+length = 2.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52]
+}
+
+[sub_resource type="Animation" id="Animation_dgjh4"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0lwrh"]
+_data = {
+"RESET": SubResource("Animation_sr6t6"),
+"die": SubResource("Animation_dowf8"),
+"dmg_takend_1": SubResource("Animation_8ulkf"),
+"dmg_takend_2": SubResource("Animation_q2aan"),
+"idle": SubResource("Animation_dgjh4"),
+"take_damage": SubResource("Animation_1sw61")
+}
 
 [node name="Cactus" type="StaticBody2D" groups=["props"]]
 script = ExtResource("1_kk2t1")
@@ -19,21 +121,28 @@ shape = SubResource("CapsuleShape2D_sk7p3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = SubResource("PortableCompressedTexture2D_w32db")
+texture = SubResource("PortableCompressedTexture2D_vn65d")
+hframes = 8
+vframes = 7
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }
 metadata/_aseprite_wizard_config_ = {
 "embed_tex": true,
-"i_mode": 1,
+"i_mode": 0,
 "keep_anim_length": false,
 "layers": [],
 "o_ex_p": "",
 "o_folder": "",
 "o_name": "",
 "only_visible": false,
-"player": "",
+"player": "AnimationPlayer",
 "slice": "",
 "source": "res://props/cactus/cactus.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "192ac6c4cd80d31a8868fc8d30196ad3"
+metadata/_aseprite_wizard_source_file_hash_ = "93eafddfeebe3cecef774c66465f6327"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0lwrh")
+}

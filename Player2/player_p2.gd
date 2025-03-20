@@ -82,12 +82,12 @@ func _on_reload_timer_timeout() -> void:
 
 func _take_head_dmg(_body) -> void:
 	if _body.is_in_group("bullet"):
-		print("You are dead, player 2")
-		print("Player 1 wins")
 		Globals.player1_score += 1
 		player2_dead.emit()
+		_body.queue_free()
 
 func _take_body_dmg(_body) -> void:
 	if _body.is_in_group("bullet"):
 		speed -= 10
+		_body.queue_free()
 		pass # Replace with function body.
