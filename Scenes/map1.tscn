@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=4 uid="uid://bgxqipq81jq73"]
+[gd_scene load_steps=6 format=4 uid="uid://bgxqipq81jq73"]
 
 [ext_resource type="PackedScene" uid="uid://chkyii7nesmax" path="res://TileSets/Desert.tscn" id="1_sdyko"]
+[ext_resource type="Script" path="res://Scenes/camera.gd" id="2_gcrmv"]
 [ext_resource type="PackedScene" uid="uid://b2dp8yl744r00" path="res://GUI/gui.tscn" id="4_q2vqt"]
 [ext_resource type="PackedScene" uid="uid://dyglyvblaeasa" path="res://props/cactus/cactus.tscn" id="6_jagay"]
 
@@ -25,6 +26,9 @@ shape = SubResource("RectangleShape2D_ryava")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-163, -93)
 anchor_mode = 0
+script = ExtResource("2_gcrmv")
+shake_intensity = 2.0
+shake_duration = 0.5
 
 [node name="GUI" parent="." instance=ExtResource("4_q2vqt")]
 

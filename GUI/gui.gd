@@ -1,5 +1,7 @@
 class_name GUI extends Control
 
+signal break_over
+
 @export var bullet_texture: Texture  # Assign in the Inspector
 
 @onready var bullet_containers: Dictionary = {
@@ -11,8 +13,13 @@ class_name GUI extends Control
 @onready var score: Label = $Label
 @onready var win_screen: Control = $WinScreen
 @onready var win_screen_label: Label = $WinScreen/ColorRect/Label
+@onready var break_screen_label: Label = $BreakScreen/Label
+@onready var break_screen_timer: float = 0.0
+
+var break_timer_running: bool = false
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	player_1.shoot_signal.connect(bullet_used_p1)
 	player_1.reload_signal.connect(reload_p1)
 	player_1.player1_dead.connect(update_score_board)
@@ -23,8 +30,20 @@ func _ready():
 	Globals.we_have_a_winner.connect(show_win_screen)
 	
 	win_screen.visible = false
+	break_screen_label.visible = false
 	score.text = str(Globals.player1_score) + " - " + str(Globals.player2_score)
 	update_bullet_display()
+
+func _process(delta: float) -> void:
+	if break_timer_running:
+		if break_screen_timer > 0:
+			break_screen_timer -= delta
+			break_screen_label.text = "Next round in " + str(snapped(break_screen_timer, 1.0))
+		else:
+			break_screen_label.visible = false
+			get_tree().paused = false
+			break_over.emit()
+			break_timer_running = false
 
 func update_bullet_display():
 	for player in range(1, 3):
@@ -67,6 +86,12 @@ func reload_p1() -> void:
 	set_bullets_p1(player_1.current_bullet_count)
 
 func update_score_board() -> void:
+	break_screen_label.text = "Next round in 10"
+	break_screen_timer = 10.0
+	break_screen_label.visible = true
+	get_tree().paused = true
+	break_timer_running = true
+	
 	score.text = str(Globals.player1_score) + " - " + str(Globals.player2_score)
 
 func show_win_screen(player: int) -> void:
