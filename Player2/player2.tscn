@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=4 uid="uid://c7lyn5p08pdn"]
+[gd_scene load_steps=13 format=4 uid="uid://c7lyn5p08pdn"]
 
 [ext_resource type="Script" path="res://Player2/player_p2.gd" id="1_ecjos"]
 [ext_resource type="PackedScene" uid="uid://dm14v0dhwxquf" path="res://Player2/bullet_p2.tscn" id="2_l5gf0"]
+[ext_resource type="AudioStream" uid="uid://00p4kfpyvn4d" path="res://Player2/682464__supersouper__revolver-fire.wav" id="3_taj2v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdqrs"]
 size = Vector2(9, 23)
@@ -92,6 +93,7 @@ speed = 150
 bullet = ExtResource("2_l5gf0")
 shoot_delay = 0.5
 reload_delay = 0.5
+shoot_sound = ExtResource("3_taj2v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3.5, 3.5)
@@ -146,6 +148,8 @@ debug_color = Color(0.654902, 0.0745098, 0.231373, 0.658824)
 position = Vector2(3, 3.5)
 shape = SubResource("RectangleShape2D_3qbw4")
 debug_color = Color(0.592157, 0.266667, 0.0352941, 0.788235)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]

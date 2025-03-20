@@ -19,6 +19,9 @@ signal player2_dead
 @onready var head_area: Area2D = $head_area
 @onready var body_area: Area2D = $body_area
 
+@onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@export var shoot_sound: AudioStream
+
 var direction: Vector2
 var current_bullet_count: int = 6
 
@@ -62,6 +65,9 @@ func shoot() -> void:
 	b.transform = marker_2d.global_transform
 	attack_timer.start()
 	animation_player.play("shoot")
+	audio_player.set_stream(shoot_sound)
+	audio_player.set_pitch_scale(randf_range(0.7, 1.0))
+	audio_player.play()
 	current_bullet_count -= 1
 	shoot_signal.emit()
 	pass
